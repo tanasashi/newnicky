@@ -10,5 +10,11 @@
   <%= @meeting.start_time %>
 </p>
 
+<p>
+  <strong>text:</strong>
+  <%= @meeting.text %>
+</p>
+
+
 <%= link_to 'Edit', edit_meeting_path(@meeting) %> |
 <%= link_to 'Back', meetings_path %>

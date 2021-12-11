@@ -7,6 +7,7 @@
     <tr>
       <th>Name</th>
       <th>Start time</th>
+      <th>text</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,6 +17,7 @@
       <tr>
         <td><%= meeting.name %></td>
         <td><%= meeting.start_time %></td>
+        <td><%= meeting.text %></td>
         <td><%= link_to 'Show', meeting %></td>
         <td><%= link_to 'Edit', edit_meeting_path(meeting) %></td>
         <td><%= link_to 'Destroy', meeting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -23,7 +25,16 @@
     <% end %>
   </tbody>
 </table>
-
 <br>
-
-<%= link_to 'New Meeting', new_meeting_path %>
+  <div class="newpath"><%= link_to 'New Meeting', new_meeting_path %></div>
+  <%= month_calendar events: @meetings do |date, meetings| %>
+    <%= date %>
+    <% meetings.each do |meeting| %>
+      <div>
+        <%= meeting.name %>
+      </div>
+      <div>
+        <%= meeting.text %>
+      </div>
+    <% end %>
+  <% end %>
