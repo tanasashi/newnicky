@@ -12,17 +12,32 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label :タイトル %>
     <%= form.text_field :name %>
   </div>
 
   <div class="field">
-    <%= form.label :text %>
+    <%= form.label :詳細 %>
+    <%= form.text_field :text %>
+  </div>
+
+   <div class="field">
+    <%= form.label :朝御飯 %>
+    <%= form.text_field :text %>
+  </div>
+
+   <div class="field">
+    <%= form.label :昼御飯  %>
+    <%= form.text_field :text %>
+  </div>
+
+   <div class="field">
+    <%= form.label :夜御飯 %>
     <%= form.text_field :text %>
   </div>
 
   <div class="field">
-    <%= form.label :start_time %>
+    <%= form.label :書いた日時 %>
     <%= form.datetime_select :start_time %>
   </div>
 

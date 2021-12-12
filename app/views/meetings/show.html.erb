@@ -1,20 +1,37 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>タイトル:</strong>
   <%= @meeting.name %>
 </p>
 
 <p>
-  <strong>Start time:</strong>
+  <strong>書いた日時:</strong>
   <%= @meeting.start_time %>
 </p>
 
 <p>
-  <strong>text:</strong>
+  <strong>詳細:</strong>
   <%= @meeting.text %>
 </p>
 
+<p>
+  <strong>朝御飯:</strong>
+  <%= @meeting.breakfast %>
+</p>
 
-<%= link_to 'Edit', edit_meeting_path(@meeting) %> |
-<%= link_to 'Back', meetings_path %>
+
+<p>
+  <strong>昼御飯:</strong>
+  <%= @meeting.lunch %>
+</p>
+
+
+<p>
+  <strong>夜御飯:</strong>
+  <%= @meeting.dinner %>
+</p>
+
+<%= link_to '詳細', edit_meeting_path(@meeting) %> |
+<%= link_to '戻る', meetings_path %> |
+<%= link_to '削除', @meeting, method: :delete, data: { confirm: 'Are you sure?' } %>
