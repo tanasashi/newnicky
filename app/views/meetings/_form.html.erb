@@ -18,22 +18,22 @@
 
   <div class="field">
     <%= form.label :詳細 %>
-    <%= form.text_field :text %>
+    <%= form.text_area :text %>
   </div>
 
    <div class="field">
     <%= form.label :朝御飯 %>
-    <%= form.text_field :text %>
+    <%= form.text_field :breakfast %>
   </div>
 
    <div class="field">
     <%= form.label :昼御飯  %>
-    <%= form.text_field :text %>
+    <%= form.text_field :lunch %>
   </div>
 
    <div class="field">
     <%= form.label :夜御飯 %>
-    <%= form.text_field :text %>
+    <%= form.text_field :dinner %>
   </div>
 
   <div class="field">
@@ -42,6 +42,6 @@
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit :登録する %>
   </div>
 <% end %>
